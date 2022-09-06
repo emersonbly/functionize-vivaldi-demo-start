@@ -21,43 +21,51 @@ function seasonSelectChanged() {
 
   // Update page to match selected season
   if (season === "spring") {
-    setSpring();
+    setSeason("spring", "#0E94D1");
   } else if (season === "summer") {
-    setSummer();
+    setSeason("summer", "#1BA848");
   } else if (season === "autumn") {
-    setAutumn();
+    setSeason("autumn", "#FE6732");
   } else if (season === "winter") {
-    setWinter();
+    setSeason("winter", "#1C64B9");
   }
 }
 
 // season functions
 
-function setSpring() {
-  seasonH2.innerHTML = "spring";
-  seasonH2.style.color = "#0E94D1";
-  seasonImg.src = "img/spring.jpg";
-  seasonAudio.src = "songs/vivaldi-spring.mp3";
-  document.body.style.backgroundColor = "#0E94D1";
-}
-function setSummer() {
-  seasonH2.innerHTML = "summer";
-  seasonH2.style.color = "#1BA848";
-  seasonImg.src = "img/summer.jpg";
-  seasonAudio.src = "songs/vivaldi-summer.mp3";
-  document.body.style.backgroundColor = "#1BA848";
-}
-function setAutumn() {
-  seasonH2.innerHTML = "autumn";
-  seasonH2.style.color = "#FE6732";
-  seasonImg.src = "img/autumn.jpg";
-  seasonAudio.src = "songs/vivaldi-autumn.mp3";
-  document.body.style.backgroundColor = "#FE6732";
-}
-function setWinter() {
-  seasonH2.innerHTML = "winter";
-  seasonH2.style.color = "#1C64B9";
-  seasonImg.src = "img/winter.jpg";
-  seasonAudio.src = "songs/vivaldi-winter.mp3";
-  document.body.style.backgroundColor = "#1C64B9";
+// function setSpring() {
+//   seasonH2.innerHTML = "spring";
+//   seasonH2.style.color = "#0E94D1";
+//   seasonImg.src = "img/spring.jpg";
+//   seasonAudio.src = "songs/vivaldi-spring.mp3";
+//   document.body.style.backgroundColor = "#0E94D1";
+// }
+// function setSummer() {
+//   seasonH2.innerHTML = "summer";
+//   seasonH2.style.color = "#1BA848";
+//   seasonImg.src = "img/summer.jpg";
+//   seasonAudio.src = "songs/vivaldi-summer.mp3";
+//   document.body.style.backgroundColor = "#1BA848";
+// }
+// function setAutumn() {
+//   seasonH2.innerHTML = "autumn";
+//   seasonH2.style.color = "#FE6732";
+//   seasonImg.src = "img/autumn.jpg";
+//   seasonAudio.src = "songs/vivaldi-autumn.mp3";
+//   document.body.style.backgroundColor = "#FE6732";
+// }
+// function setWinter() {
+//   seasonH2.innerHTML = "winter";
+//   seasonH2.style.color = "#1C64B9";
+//   seasonImg.src = "img/winter.jpg";
+//   seasonAudio.src = "songs/vivaldi-winter.mp3";
+//   document.body.style.backgroundColor = "#1C64B9";
+// }
+
+function setSeason(seasonName, seasonColour) {
+  seasonH2.innerHTML = seasonName;
+  seasonH2.style.color = seasonColour;
+  seasonImg.src = `img/${seasonName}.jpg`;
+  seasonAudio.src = `songs/vivaldi-${seasonName}.mp3`;
+  document.body.style.backgroundColor = seasonColour;
 }
