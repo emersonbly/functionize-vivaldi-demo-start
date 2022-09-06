@@ -1,4 +1,4 @@
-// Functionize Vivaldi Demo
+// Functionize Vivaldi Demo - student copy
 
 // spring-color: #0E94D1
 // summer-color: #1BA848
