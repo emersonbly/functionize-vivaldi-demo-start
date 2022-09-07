@@ -32,7 +32,6 @@ function seasonSelectChanged() {
 }
 
 // set season
-
 function setSeason(seasonName, seasonColour) {
   seasonH2.innerHTML = seasonName;
   seasonH2.style.color = seasonColour;
